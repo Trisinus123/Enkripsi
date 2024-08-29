@@ -20,7 +20,7 @@
         <p>{{ session('success') }}</p>
     @endif
 
-    <h2>Encrypted Files</h2>
+    <h2>Dencrypted Files</h2>
     <ul>
         @foreach($files as $file)
             <li>
