@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EncryptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/form', [EncryptionController::class, 'showForm'])->name('form');
+Route::post('/encrypt', [EncryptionController::class, 'encrypt'])->name('encrypt');
+Route::post('/decrypt/{id}', [EncryptionController::class, 'decrypt'])->name('decrypt');
