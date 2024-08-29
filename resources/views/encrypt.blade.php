@@ -44,6 +44,7 @@
                             <button type="submit" class="btn btn-success">Download Decrypted</button>
                         </form>
 
+<<<<<<< HEAD
                         <!-- Download Encrypted Button -->
                         <form action="{{ route('downloadEncrypted', $file->id) }}" method="GET" style="display:inline;">
                             <button type="submit" class="btn btn-info">Download Encrypted</button>
@@ -55,3 +56,19 @@
     </table>
 </div>
 @endsection
+=======
+    <h2>Dencrypted Files</h2>
+    <ul>
+        @foreach($files as $file)
+            <li>
+                {{ $file->original_filename }}
+                <form action="{{ route('decrypt', $file->id) }}" method="POST" style="display:inline;">
+                    @csrf
+                    <button type="submit">Decrypt & Download</button>
+                </form>
+            </li>
+        @endforeach
+    </ul>
+</body>
+</html>
+>>>>>>> a70eff78aa1e605e2b9c824e977ffe9c6b542b83
