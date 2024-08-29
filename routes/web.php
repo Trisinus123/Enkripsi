@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Route::get('/form', [EncryptionController::class, 'showForm'])->name('form');
 Route::post('/encrypt', [EncryptionController::class, 'encrypt'])->name('encrypt');
-Route::post('/decrypt/{id}', [EncryptionController::class, 'decrypt'])->name('decrypt');
+Route::get('/decrypt/{id}', [EncryptionController::class, 'decrypt'])->name('decrypt');
+Route::get('/download-encrypted/{id}', [EncryptionController::class, 'downloadEncrypted'])->name('downloadEncrypted');
