@@ -43,8 +43,6 @@
                         <form action="{{ route('decrypt', $file->id) }}" method="GET" style="display:inline;">
                             <button type="submit" class="btn btn-success">Download Decrypted</button>
                         </form>
-
-<<<<<<< HEAD
                         <!-- Download Encrypted Button -->
                         <form action="{{ route('downloadEncrypted', $file->id) }}" method="GET" style="display:inline;">
                             <button type="submit" class="btn btn-info">Download Encrypted</button>
